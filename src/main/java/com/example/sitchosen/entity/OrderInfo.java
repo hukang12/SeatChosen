@@ -1,5 +1,7 @@
 package com.example.sitchosen.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 /**
@@ -12,8 +14,11 @@ public class OrderInfo {
     private String userAccount;
     private String roomName;
     private String seatLocation;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date selectTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date signInTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date signOutTime;
 
     @Override

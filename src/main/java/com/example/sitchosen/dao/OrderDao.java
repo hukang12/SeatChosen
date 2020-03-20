@@ -2,6 +2,7 @@ package com.example.sitchosen.dao;
 
 import com.example.sitchosen.entity.OrderInfo;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,4 +19,8 @@ public interface OrderDao {
     int insertOrder(OrderInfo order);
     //修改预约信息(签到后)修改签到时间、释放座位时间
     int updateOrder(OrderInfo order);
+    //签到
+    int updateSignIn(Date signInTime);
+    //释放
+    int updateSignOut(Date signOutTime);
 }
