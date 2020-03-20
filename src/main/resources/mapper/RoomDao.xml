@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sitchosen.dao.RoomDao">
+    <select id="showRoomInfo" resultType="com.example.sitchosen.entity.RoomInfo">
+        select room_id, room_name,room_floor,seat_row, seat_col, seat_available
+        from room_info
+
+    </select>
+    <select id="findByRoomId" resultType="com.example.sitchosen.entity.RoomInfo">
+        select room_id, room_name,room_floor,seat_row, seat_col, seat_available
+        from room_info
+        where room_id=#{roomId}
+    </select>
+    <insert id="insertRoom" useGeneratedKeys="true" keyProperty="roomId"
+            keyColumn="room_id" parameterType="com.example.sitchosen.entity.RoomInfo">
+        INSERT INTO
+        room_info(room_name,room_floor,seat_row, seat_col, seat_available)
+        VALUES
+        (#{roomName},#{roomFloor},#{seatRow},#{seatCol},#{seatAvailable})
+    </insert>
+    <update id="updateRoom" parameterType="com.example.sitchosen.entity.RoomInfo">
+        update room_info
+        <set>
+            <if test="roomName!=null">room_name=#{roomName},</if>
+            <if test="roomFloor!=null">room_floor=#{roomFloor},</if>
+            <if test="seatRow!=null">seat_row=#{seatRow},</if>
+            <if test="seatCol!=null">seat_col=#{seatCol},</if>
+            <if test="seatAvailable!=null">seat_available=#{seatAvailable}</if>
+        </set>
+        where room_id=#{roomId}
+    </update>
+</mapper>

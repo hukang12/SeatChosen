@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sitchosen.dao.UserDao">
+    <select id="showUserInfo" resultType="com.example.sitchosen.entity.UserInfo">
+        SELECT user_account,user_name,user_sex,user_tel,user_email,user_password
+        FROM user_info
+        order by user_account
+        desc
+    </select>
+    <select id="queryUserByAccount" resultType="com.example.sitchosen.entity.UserInfo">
+        SELECT user_account,user_name,user_sex,user_tel,user_email,user_password
+        FROM user_info
+        where user_account = #{userAccount}
+    </select>
+    <insert id="addUser"  parameterType="com.example.sitchosen.entity.UserInfo">
+        <set>
+
+        </set>
+        insert into user_info (
+          user_account,user_name,user_sex,user_tel,user_email,user_password
+        )
+        values(
+        #{userAccount},#{userName},#{userSex},#{userTel},#{userEmail},#{userPassword}
+        )
+    </insert>
+    <update id="updatePsd" parameterType="String">
+        UPDATE user_info
+        set user_password = #{userPassword}
+        where user_tel= #{userTel}
+    </update>
+</mapper>
