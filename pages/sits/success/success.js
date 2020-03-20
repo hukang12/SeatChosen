@@ -67,5 +67,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleClick:function(){
+    console.log(e);
   }
 })

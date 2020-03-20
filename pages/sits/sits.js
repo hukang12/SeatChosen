@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dateArr: [['今天', '明天'], ['7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'], ['00', '10', '20', '30', '40', '50']],
+    dateIndex: [0, 0, 0],
     selectArr:'',
     seatArr:'',
     seatLocation:'',
@@ -13,7 +15,12 @@ Page({
     src:'sit_admit.png',
     name:''
   },
- 
+  bindDateTimeChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      dateIndex: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -215,33 +222,4 @@ Page({
     
     
   },
-  //随机选择座位
-  randomSelect:function(e){
-
-    var that = this;
-    var selectLocation = that.data.seatLocation;
-    if(selectLocation != ''){
-      wx.showToast({
-        title: '您已经选择了座位',
-        icon:'none'
-      })
-    }else{
-      var randomRow = Math.ceil(Math.random() * (that.data.row-1));
-      var randomCol = Math.ceil(Math.random() * (that.data.col-1));
-      var arr = new Array();
-      arr.push({
-        x:randomRow,
-        y:randomCol
-      })
-      var src = 'seatArr['+(randomRow - 1)+']['+(randomCol - 1)+'].src';
-      
-      console.log(src+randomRow+'排'+randomCol+'列');
-      console.log(that);
-      that.setData({
-        [src]:'sit_chosen.png',
-        seatArr:arr,
-        seatLocation: randomRow + '排' + randomCol + '列'
-      })
-    }
-  }
 })

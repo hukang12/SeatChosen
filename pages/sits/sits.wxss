@@ -60,9 +60,9 @@
 }
 .commit{
   margin-top: 10px;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 .commit button{
   width: 120px;

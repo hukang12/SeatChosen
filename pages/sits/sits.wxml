@@ -29,12 +29,17 @@
 
 <view class="commit">
    <view>
-    <button bindtap="randomSelect" class="btn_random">随机选座</button>
+    <picker mode="multiSelector" range="{{dateArr}}" value="{{dateIndex}}"  bindchange="bindDateTimeChange">
+    <view class="picker">
+      <text>预约时间</text>
+      <text class="time">{{dateArr[0][dateIndex[0]]}} {{dateArr[1][dateIndex[1]]}}:{{dateArr[2][dateIndex[2]]}}</text>
+    </view>
+  </picker>
   </view>
   <view class="show_seat_location">
     <text>{{seatLocation}}</text>
   </view>
   <view>
-    <button bindtap="submitSelect" data-name="{{name}}"  data-location="{{seatLocation}}" class="btn_commit">提交预约</button>
+    <button bindtap="submitSelect" data-name="{{name}}"  data-location="{{seatLocation}}" class="btn_commit">确定</button>
   </view>
 </view>
