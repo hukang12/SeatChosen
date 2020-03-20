@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,13 +41,32 @@ public class OrderController {
     @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
     private Map<String,Object> addOrder(@RequestBody OrderInfo order){
         Map<String,Object> map = new HashMap<>();
-        map.put("success",orderService.addOrder(order));
+        map.put("orderId",orderService.addOrder(order));
         return map;
     }
     @RequestMapping(value = "/modifyOrder",method = RequestMethod.POST)
     private Map<String,Object> modifyOrder(@RequestBody OrderInfo order){
         Map<String,Object> map = new HashMap<>();
         map.put("success",orderService.modifyOrder(order));
+        return map;
+    }
+    @RequestMapping(value = "SignIn",method = RequestMethod.GET)
+    private Map<String,Object> setSignInTime(int id){
+        System.out.println(id);
+        Map<String,Object> map = new HashMap<>();
+        map.put("success",orderService.modifySignIn(id));
+        return map;
+    }
+    @RequestMapping(value = "SignOut",method = RequestMethod.GET)
+    private Map<String,Object> setSignOutTime(int id){
+        Map<String,Object> map = new HashMap<>();
+        map.put("success",orderService.modifySignOut(id));
+        return map;
+    }
+    @RequestMapping(value = "Cancel",method = RequestMethod.GET)
+    private Map<String,Object> cancelOrder(int orderId){
+        Map<String,Object> map = new HashMap<>();
+        map.put("success",orderService.cancelOrder(orderId));
         return map;
     }
 }

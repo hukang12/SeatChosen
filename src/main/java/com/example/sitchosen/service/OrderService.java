@@ -2,6 +2,7 @@ package com.example.sitchosen.service;
 
 import com.example.sitchosen.entity.OrderInfo;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,6 +13,9 @@ import java.util.List;
 public interface OrderService {
     List<OrderInfo> getAllOrder();
     List<OrderInfo> getByAccount(String userAccount);
-    boolean addOrder(OrderInfo order);
+    int addOrder(OrderInfo order);
     boolean modifyOrder(OrderInfo order);
+    boolean modifySignIn(int id);
+    boolean modifySignOut(int id);
+    boolean cancelOrder(int id);
 }

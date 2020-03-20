@@ -14,12 +14,23 @@ public class OrderInfo {
     private String userAccount;
     private String roomName;
     private String seatLocation;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date selectTime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date signInTime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date signOutTime;
+    private String orderStatus;
+
+    public String getStatus() {
+        return orderStatus;
+    }
+
+    public void setStatus(String status) {
+        this.orderStatus = status;
+    }
+
+
 
     @Override
     public String toString() {
@@ -31,6 +42,7 @@ public class OrderInfo {
                 ", selectTime=" + selectTime +
                 ", signInTime=" + signInTime +
                 ", signOutTime=" + signOutTime +
+                ", status=" + orderStatus +
                 '}';
     }
 

@@ -13,6 +13,11 @@
         FROM user_info
         where user_account = #{userAccount}
     </select>
+    <select id="findById" resultType="com.example.sitchosen.entity.OrderInfo">
+        SELECT user_account,user_name,user_sex,user_tel,user_email,user_password
+        FROM user_info
+        where order_id = #{orderId}
+    </select>
     <insert id="addUser"  parameterType="com.example.sitchosen.entity.UserInfo">
         <set>
 
