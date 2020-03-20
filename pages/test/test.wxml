@@ -1,0 +1,5 @@
+<view class="container">
+  <card room_name="2F-再中阁" status="待签到" seat="2排3座" order_time="2019-3-18">dsa</card>
+  <card room_name="2F-再中阁" status="待签到" seat="2排3座" order_time="2019-3-18">dsa</card>
+</view>
+

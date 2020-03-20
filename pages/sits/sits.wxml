@@ -1,0 +1,40 @@
+<view class="title">
+  <text>当前在{{name}}，请选择座位</text>
+  <view class="zhujie">
+    <view>
+      <image src="/imgs/sit_admit.png"></image>
+    <text>:可选</text>
+    </view>
+    <view>
+      <image src="/imgs/sit_ban.png"></image>
+    <text>:不可选</text>
+    </view>
+    <view>
+      <image src="/imgs/sit_chosen.png"></image>
+    <text>:选中</text>
+    </view>
+    
+  </view>
+</view>
+
+<scroll-view class="sit" scroll-y="true">
+  <block wx:for = "{{seatArr}}" wx:for-index="row_id" wx:for-item="row_seat" wx:key="this">
+    <view class="view_seat_location">
+      <block wx:for="{{row_seat}}" wx:for-index="col_id" wx:for-item="col_seat" wx:key="this">
+      <image class="seat_image" src="/imgs/{{col_seat.src}}" bindtap="seat_click" data-x="{{row_id}}" data-y="{{col_id}}" data-src="{{col_seat.src}}"></image>
+      </block>
+    </view> 
+  </block>
+</scroll-view>
+
+<view class="commit">
+   <view>
+    <button bindtap="randomSelect" class="btn_random">随机选座</button>
+  </view>
+  <view class="show_seat_location">
+    <text>{{seatLocation}}</text>
+  </view>
+  <view>
+    <button bindtap="submitSelect" data-name="{{name}}"  data-location="{{seatLocation}}" class="btn_commit">提交预约</button>
+  </view>
+</view>

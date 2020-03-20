@@ -1,0 +1,37 @@
+.container{
+  width: 100%;
+  height: 1050rpx;
+  background: url("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3677382241,3764825184&fm=26&gp=0.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.body{
+  width: 70%;
+  height: 70%;
+  background: skyblue;
+  
+}
+.body view{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form_left{
+  width: 100px;
+  height: 25px;
+  text-align: center;
+}
+.btn_commit{
+  width: 140px; 
+  height: 30px;
+  border-radius: 25px;
+  background-color: yellow;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: 10px;
+}

@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+</view>
+  <!-- <view class="setting_list">
+    <block wx:if="{{is_admin}}">
+      <view class="list_item">
+        <text bindtap="updatePassword">修改个人密码</text>
+      </view>
+      <view class="list_item">
+        <text bindtap="toRoomSetting">自习室管理</text>
+      </view>
+      <view class="list_item">
+        <text>用户积分管理</text>
+      </view>
+      <view class="list_item">
+        <text bindtap="toAboutUs">关于我们</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="list_item">
+      <text>修改密码</text>
+      </view>
+      <view class="list_item">
+        <text>预约记录</text>
+      </view>
+      <view class="list_item">
+        <text>信誉积分</text>
+      </view>
+      <view class="list_item">
+        <text>关于我们</text>
+      </view>
+    </block>
+    
+  </view> -->
+
+  <i-cell-group>
+    <i-cell title="修改密码" bindtap="updatePassword" is-link ></i-cell>
+    <i-cell title="自习室管理" bindtap="toRoomSetting" is-link  only-tap-footer></i-cell>
+    <i-cell title="预约记录"  bindtap="findOrder" is-link  only-tap-footer></i-cell>
+    <i-cell title="用户积分管理"  is-link  only-tap-footer></i-cell>
+    <i-cell title="回到首页"  is-link  only-tap-footer></i-cell>
+    <i-cell title="关于我们"  bindtap="toAboutUs" is-link  only-tap-footer></i-cell>
+    
+</i-cell-group>
+</view>

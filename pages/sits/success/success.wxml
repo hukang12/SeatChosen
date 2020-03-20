@@ -1,0 +1,7 @@
+<i-card title="当前预约" extra="别忘了打卡哟" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">{{name}}</view>
+    <view slot="footer">{{location}}</view>
+</i-card>
+<i-button type="primary">签到</i-button>
+<i-button type="info">暂离</i-button>
+<i-button type="success">释放座位</i-button>

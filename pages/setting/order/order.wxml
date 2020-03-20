@@ -1,0 +1,29 @@
+ <view class="container">
+  <view class="head">
+    <text>ID</text>
+    <text>账号</text>
+    <text>自习室</text>
+    <text>座位</text>
+    <text>查看更多</text>
+  </view>
+    <scroll-view class="detail" scroll-y="true">
+      <!-- <view class="detail_item">
+        <block wx:for="{{orderList}}" wx:key="this">
+          <view class="order_item">
+            <text class="column1">{{item.orderId}}</text>
+            <text class="column2">{{item.userAccount}}</text>
+            <text class="column3">{{item.roomName}}</text>
+            <text class="column3">{{item.seatLocation}}</text>
+            <text class="column3">更多</text>    
+          </view>
+        </block>
+      </view> -->
+      <block wx:for="{{orderList}}" wx:key="this">
+        <card room_name="{{item.roomName}}" status="待签到" seat="{{item.seatLocation}}" order_time="{{item.selectTime}}">dsa</card>
+      </block>
+    </scroll-view>  
+</view> 
+
+
+
+

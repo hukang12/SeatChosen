@@ -1,0 +1,35 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  
+    <view class="row">
+      <text>名称：</text>
+      <input type="text" name="roomName" placeholder="请输入自习室名称" value="{{roomName}}"></input>
+    </view>
+
+    <view class="row"> 
+      <text>楼层：</text>
+      <input type="text" name="roomFloor" placeholder="请输入自习室所在楼层" value="{{roomFloor}}"></input>
+    </view>
+
+    <view class="row">
+      <text>排数：</text>
+      <input type="text" name="seatRow" placeholder="请输入座位的排数" value="{{seatRow}}"></input>
+    </view>
+
+    <view class="row">
+      <text>列数：</text>
+      <input type="text" name="seatCol" placeholder="请输入座位的列数" value="{{seatCol}}"></input>
+    </view>
+
+    <view class="row">
+      <text>可用：</text>
+      <input type="text" name="seatAvailable" placeholder="请输入当前可用座位" value="{{seatAvailable}}"></input>
+    </view>
+
+    <view class="row">
+      <button type="primary" form-type="submit">提交</button>
+      <button type="primary" form-type="reset">清空</button>
+    </view>
+
+  </form>
+</view>

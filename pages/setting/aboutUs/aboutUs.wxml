@@ -1,0 +1,10 @@
+<!--pages/setting/aboutUs/aboutUs.wxml-->
+<view>
+  <text>姓名：胡康</text>
+</view>
+<view>
+  <text>班级：计科1603班</text>
+</view>
+<view>
+  <text>学号：20162550</text>
+</view>

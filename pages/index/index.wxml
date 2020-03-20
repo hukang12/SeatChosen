@@ -1,0 +1,44 @@
+<view class="page">
+    <!-- 侧边栏内容 -->
+    <view class="page-slidebar">
+        <view class="page-content">
+          <i-cell-group>
+            <i-cell title="修改密码" bindtap="updatePassword" is-link ></i-cell>
+            <i-cell title="自习室管理" bindtap="toRoomSetting" is-link  only-tap-footer></i-cell>
+            <i-cell title="预约记录"  bindtap="findOrder" is-link  only-tap-footer></i-cell>
+            <i-cell title="用户积分管理"  is-link  only-tap-footer></i-cell>
+            <i-cell title="回到首页"  is-link  only-tap-footer></i-cell>
+            <i-cell title="关于我们"  bindtap="toAboutUs" is-link  only-tap-footer></i-cell>
+          </i-cell-group>
+        </view>
+    </view>
+    
+    <!-- 主页内容 -->
+    <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} ">
+        <!-- 左上角图标 -->
+        <image bindtap="tap_ch" src="../../imgs/sit_ban.png "></image>
+        <!-- 主页内容 -->
+        <view class="content">
+          <view class="body">
+            <text class="title">图书馆选座系统</text>
+            <!-- 表单 -->
+            <form bindsubmit="formSubmit">
+              <view class="txt_input">
+                <text class="studynumber">学号</text>
+                <input type="text" name="userAccount" placeholder="请输入学号" value="{{userAccount}}"></input>
+              </view>
+              <view class="txt_input">
+                <text class="studynumber">密码</text>
+                <input password="true" name="userPassword" placeholder="请输入密码" value="{{userPassword}}"></input>
+              </view>  
+              <button form-type="submit" class="btn_login">登录</button>
+            </form>
+            <view class="under">
+              <text class="navi" bindtap="forget_psd">忘记密码？</text>
+              <text class="navi" bindtap="register">立即注册</text>
+            </view>
+          </view>
+        </view>
+        <!-- 主页内容结束 -->
+    </view>
+</view>

@@ -1,0 +1,98 @@
+
+
+
+<!-- <view class="card">
+  <view class="top">
+    <text>2020年3月17日09:58:50</text>
+  </view>
+  <view class="body">
+    <view class="left">
+      <text>逸夫图书馆</text>
+      <text>2F 再中阁</text>
+      <text>6排7座</text>
+    </view>
+    <view class="right">
+      <text>预约状态：成功</text>
+      <text>使用状态：已完成</text>
+    </view>
+  </view>
+  <text>九宫格</text> -->
+  <swiper indicator-dots autoplay interval="3000" circular easing-function="easeInOutCubic">
+    <swiper-item>
+      <image class="img" src="../../imgs/lunbo1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="img" src="../../imgs/lunbo2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="img" src="../../imgs/lunbo3.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <i-grid>
+    <i-grid-item>
+        <i-grid-icon>
+            <image bindtap="" src="../../imgs/grid/regular.png" />
+            
+        </i-grid-icon>
+        <i-grid-label>选座须知</i-grid-label>
+    </i-grid-item>
+    
+    <i-grid-item>
+      <i-grid-icon>
+            <image bindtap="toOrder" src="../../imgs/grid/order.png" />
+        </i-grid-icon>
+      <i-grid-label>座位预约</i-grid-label>  
+    </i-grid-item>
+    <i-grid-item>
+      <i-grid-icon>
+            <image src="../../imgs/grid/presee.png" />
+           
+        </i-grid-icon>
+        <i-grid-label>座位预览</i-grid-label>
+    </i-grid-item>
+</i-grid>
+
+<i-grid>
+    <i-grid-item>
+        <i-grid-icon>
+            <image src="../../imgs/grid/quxiao.png" />
+        </i-grid-icon>
+        <i-grid-label>取消预约</i-grid-label>
+    </i-grid-item>
+    
+    <i-grid-item>
+      <i-grid-icon>
+            <image src="../../imgs/grid/saoma.png" />
+        </i-grid-icon>
+        <i-grid-label>扫码签到</i-grid-label>
+    </i-grid-item>
+    <i-grid-item>
+        <i-grid-icon>
+            <image src="../../imgs/grid/coffee.png" />
+        </i-grid-icon>
+        <i-grid-label>临时离开</i-grid-label>
+    </i-grid-item>
+</i-grid>
+
+<i-grid>
+    <i-grid-item>
+        <i-grid-icon>
+            <image src="../../imgs/grid/leave.png" />
+        </i-grid-icon>
+        <i-grid-label>释放座位</i-grid-label>
+    </i-grid-item>
+    
+    <i-grid-item>
+      <i-grid-icon>
+            <image src="../../imgs/grid/back.png" />
+        </i-grid-icon>
+      <i-grid-label>离座返回</i-grid-label>  
+    </i-grid-item>
+    <i-grid-item>
+      <i-grid-icon>
+            <image src="../../imgs/grid/jubao.png" />
+        </i-grid-icon>
+        <i-grid-label>投诉举报</i-grid-label>
+    </i-grid-item>
+</i-grid>
+<!-- </view> -->

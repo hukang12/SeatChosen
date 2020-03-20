@@ -1,0 +1,54 @@
+.container{
+  width: 750rpx;
+  height: 300rpx;
+  background: skyblue;
+  padding-top: 10rpx;
+}
+.body{
+  width: 700rpx;
+  height: 270rpx;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto; 
+  padding-top: 18rpx;
+  box-shadow: 2px 2px 3px 3px gray
+}
+.top{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name{
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+.status{
+  margin-top: 15rpx;
+  margin-right: 40rpx;
+  color: red;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  
+}
+.detail{
+  width: 60%;
+  height: 130rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  
+}
+.detail text{
+  margin-left: 40rpx;
+}
+.more{
+  color: gray;
+  padding-right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 30rpx
+}

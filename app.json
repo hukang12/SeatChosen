@@ -1,0 +1,49 @@
+{
+  "pages": [
+    
+    "pages/setting/setting",
+    "pages/chosen/chosen",
+    "pages/sits/success/success",
+    "pages/test/test",
+    
+    "pages/index/index",
+    "pages/forget_psd/forget_psd",
+    "pages/register/register",
+    "pages/sits/sits",
+    
+    "pages/setting/roomSetting/roomSetting",
+    "pages/setting/operation/operation",
+    "pages/setting/aboutUs/aboutUs",
+    "pages/setting/order/order",
+    "pages/yy/yy"
+    
+  ],
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/imgs/tabBar/index.png",
+        "selectedIconPath": "/imgs/tabBar/index_chosen.png",
+        "navigationBarTitleText": "首页"
+      },
+      {
+        "pagePath": "pages/yy/yy",
+        "text": "主页",
+        "iconPath": "/imgs/tabBar/appoint.png",
+        "selectedIconPath": "/imgs/tabBar/appoint_chosen.png",
+        "navigationBarTitleText": "主页"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "/imgs/tabBar/setting.png",
+        "selectedIconPath": "/imgs/tabBar/setting_chosen.png",
+        "navigationBarTitleText": "设置"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

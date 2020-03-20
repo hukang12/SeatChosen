@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="head">
+    <text>楼层</text>
+    <text>名称</text>
+    <text>可选/总数</text>
+  </view>
+    <scroll-view class="detail" scroll-y="true">
+      <view class="detail_item">
+        <block wx:for="{{roomList}}" wx:key="this">
+          <view class="room_item">
+            <text class="column">{{item.roomFloor}}F</text>
+            <text class="column" bindtap="tapTo_sit" id="{{item.roomId}}" data-name="{{item.roomName}}" data-row="{{item.seatRow}}" data-col="{{item.seatCol}}">{{item.roomName}}</text>
+            <text class="column">{{item.seatAvailable}}/{{item.seatRow*item.seatCol}}</text>
+          </view>
+        </block>
+      </view>
+      
+    </scroll-view>
+</view>

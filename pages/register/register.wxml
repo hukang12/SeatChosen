@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+     <view >
+       <text class="form_left">账号</text>
+       <input name="account" placeholder="请输入学号或工号" value="{{account}}"></input>
+     </view>
+
+    <view>
+       <text class="form_left">姓名</text>
+       <input name="name" placeholder="请输入真实姓名" value="{{name}}"></input>
+    </view>
+
+    <view>
+       <text class="form_left">性别</text>
+       <radio-group name="sex" value="{{sex}}">
+          <radio value="1">男</radio>
+          <radio value="0">女</radio>
+       </radio-group>
+    </view>
+
+    <view>
+       <text class="form_left" >手机号</text>
+       <input name="tel" placeholder="请输入手机号" value="{{tel}}"></input>
+    </view>
+
+    <view>
+       <text class="form_left">邮箱</text>
+       <input name="email" placeholder="请输入邮箱" value="{{email}}"></input>
+    </view>
+
+    <view>
+       <text class="form_left">密码</text>
+       <input name="password" placeholder="请输入密码" value="{{password}}"></input>
+    </view>
+
+    <view>
+       <text class="form_left">确认密码</text>
+       <input  placeholder="请再次输入密码"></input>
+    </view>
+    <view>
+      <button class="btn_commit" form-type="submit">提交</button>
+      <button class="btn_commit" form-type="reset">清空</button>
+    </view>
+    
+    </form>
+    
+   
+  </view>
+</view>

@@ -1,0 +1,41 @@
+.card{
+  width: 100%;
+  height: 350rpx;
+  border: solid 1px skyblue;
+}
+.top{
+  width: 70%;
+  height: 2.5rem;
+  border: solid 1px red;
+  text-align: center;
+  line-height: 2.5rem;
+  
+}
+.body{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.left{
+  width: 300rpx;
+  height: 200rpx;
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+}
+.right{
+  width: 300rpx;
+  height: 200rpx;
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+}
+swiper{
+  height: 180px;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}

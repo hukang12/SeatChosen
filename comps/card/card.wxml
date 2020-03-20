@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="body">
+  <view class="top">
+    <text class="name">{{room_name}}</text>
+    <text class="status">{{status}}</text>
+  </view>
+  <view class="detail">
+    <text class="seat">{{seat}}</text>
+    <text class="ordertime">{{order_time}}</text>
+  </view>
+  <view class="more">
+    <navigator url="{{moreInfoUrl}}">查看更多</navigator>
+  </view>
+</view>
+</view>
