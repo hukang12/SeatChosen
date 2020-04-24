@@ -2,6 +2,6 @@
     <view slot="content">{{name}}</view>
     <view slot="footer">{{location}}</view>
 </i-card>
-<i-button bind:click="handleClick" type="primary">签到</i-button>
-<i-button bind:click="handleClick" type="info">暂离</i-button>
-<i-button bind:click="handleClick" type="success">释放座位</i-button>
+<i-button id="1" bind:click="handleClick" type="primary">签到</i-button>
+<i-button id="2" bind:click="handleClick" type="info">暂离</i-button>
+<i-button id="3" bind:click="handleClick" type="success">释放座位</i-button>

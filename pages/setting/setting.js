@@ -131,12 +131,6 @@ Page({
       url: '../setting/aboutUs/aboutUs',
     })
   },
-  click:function(){
-    console.log(this);
-    wx.showToast({
-      title: '点击了',
-    })
-  },
   //预约记录
   findOrder:function(){
     wx.navigateTo({

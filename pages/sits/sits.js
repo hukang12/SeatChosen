@@ -169,15 +169,16 @@ Page({
     var time = new Date();
     var location = this.data.seatLocation;
     var body={
+      orderId:'',
       userAccount:account,
       roomName:name,
       seatLocation:location,
       selectTime:time,
       signInTime:'',
-      signOutTime:''
-
+      signOutTime:'',
+      order_status:'待签到'
     }
-    console.log(e);
+    console.log(body);
     if (this.data.seatLocation!=""){
       wx.showToast({
         title: '预约成功！',
@@ -186,31 +187,33 @@ Page({
       //页面跳转到签到页面
       var name = e.currentTarget.dataset.name;
       var location = e.currentTarget.dataset.location;
-      wx.redirectTo({
-        url: '../sits/success/success?name=' + name + '&location=' + location,
-      })
+      
       //预约信息写入数据库
       wx.request({
         url: 'http://localhost:8083/sitchosen/order/addOrder',
         data: JSON.stringify(body),
         method:'POST',
         success: function (res) {
-          if (res.data.success) {
-            wx.showToast({
-              title: '操作成功',
-              icon: '',
-              duration: 2000
-            });
+          console.log(res.data.orderId);
+          var orderId = res.data.orderId;
+          // if (res.data.success) {
+          //   wx.showToast({
+          //     title: '操作成功',
+          //     icon: '',
+          //     duration: 2000
+          //   });
 
             
-          } else {
-            wx.showToast({
-              title: '操作失败',
-              icon: '',
-              duration: 2000
-            });
-          }
-          
+          // } else {
+          //   wx.showToast({
+          //     title: '操作失败',
+          //     icon: '',
+          //     duration: 2000
+          //   });
+          // }
+          wx.redirectTo({
+            url: '../sits/success/success?name=' + name + '&location=' + location + '&orderId=' + orderId,
+          })
         }
       })
     }else{

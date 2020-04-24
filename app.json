@@ -1,15 +1,20 @@
 {
   "pages": [
-    
-    "pages/setting/setting",
+    "pages/index/index",
     "pages/chosen/chosen",
+    
     "pages/sits/success/success",
+    
+    "pages/sits/sits",
+    "pages/setting/setting",
+    
+    
     "pages/test/test",
     
-    "pages/index/index",
+    
     "pages/forget_psd/forget_psd",
     "pages/register/register",
-    "pages/sits/sits",
+    
     
     "pages/setting/roomSetting/roomSetting",
     "pages/setting/operation/operation",

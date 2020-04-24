@@ -1,5 +1,9 @@
 {
   "usingComponents": {
     "card": "../../comps/card/card"
-  }
+  },
+  "navigationBarBackgroundColor": "#1296db",
+  "navigationBarTitleText": "我的预约记录",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#eeeeee"
 }

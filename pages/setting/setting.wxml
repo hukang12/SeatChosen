@@ -40,9 +40,9 @@
 
   <i-cell-group>
     <i-cell title="修改密码" bindtap="updatePassword" is-link ></i-cell>
-    <i-cell title="自习室管理" bindtap="toRoomSetting" is-link  only-tap-footer></i-cell>
-    <i-cell title="预约记录"  bindtap="findOrder" is-link  only-tap-footer></i-cell>
-    <i-cell title="用户积分管理"  is-link  only-tap-footer></i-cell>
+    <!-- <i-cell title="自习室管理" bindtap="toRoomSetting" is-link  only-tap-footer></i-cell> -->
+    <i-cell title="我的预约记录"  bindtap="findOrder" is-link  only-tap-footer></i-cell>
+    <i-cell title="我的积分"  is-link  only-tap-footer></i-cell>
     <i-cell title="回到首页"  is-link  only-tap-footer></i-cell>
     <i-cell title="关于我们"  bindtap="toAboutUs" is-link  only-tap-footer></i-cell>
     
